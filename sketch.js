@@ -2,6 +2,7 @@ let imagemCenario;
 let imagemPersonagem;
 let imagemInimigo;
 let imagemGameOver;
+let pontuacao;
 let cenario;
 let somDoJogo;
 let somDoPulo;
@@ -128,6 +129,7 @@ function preload(){
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  pontuacao = new Pontuacao();
   cenario = new Cenario(imagemCenario,3);
   personagem = new Personagem(matrizPersonagem,imagemPersonagem,0,30,110,135,220,270);
   const inimigo = new Inimigo(matrizInimigo,imagemInimigo,width - 52,30,52,52,104,104,3,200);
@@ -156,6 +158,9 @@ function draw() {
   cenario.exibe();
  
   cenario.move();
+  pontuacao.exibe();
+  pontuacao.addPonto();
+  
   personagem.exibe();
   personagem.aplicaGravidade();
   
@@ -167,10 +172,10 @@ function draw() {
     if(personagem.estaColidindo(inimigo)){
       console.log('colidiu');
       
-     // noLoop();
+      noLoop();
       somDoJogo.pause();
       //somDerrota.play();
-     // image(imagemGameOver,windowWidth /3,windowHeight /2,412,78);
+     image(imagemGameOver,width /2 - 200,height /2);
     }
   });
   
