@@ -3,6 +3,7 @@ let imagemPersonagem;
 let imagemInimigo;
 let imagemGameOver;
 let imagemTelaInicial;
+let imagemVida;
 let fonteTelaIncial;
 let pontuacao;
 let cenario;
@@ -14,6 +15,8 @@ let inimigo;
 
 let jogo;
 let telaInicial;
+let vida;
+let fita;
 
 let cenaAtual = 'telaInicial';
 let cenas;

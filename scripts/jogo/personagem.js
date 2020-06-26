@@ -32,7 +32,20 @@ class Personagem extends Animacao{
       }
     }
     
+
+    ficaInvencivel(){
+      this.invencivel = true;
+      setTimeout(()=>{
+        this.invencivel = false;
+      },1000
+      )
+        
+    }
     estaColidindo(inimigo) {
+      if(this.invencivel){
+        return false;
+      }
+      
       const precisao = .7
       
 
