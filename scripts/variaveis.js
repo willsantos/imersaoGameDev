@@ -2,14 +2,25 @@ let imagemCenario;
 let imagemPersonagem;
 let imagemInimigo;
 let imagemGameOver;
+let imagemTelaInicial;
+let fonteTelaIncial;
 let pontuacao;
 let cenario;
 let somDoJogo;
 let somDoPulo;
 let somDerrota;
 let personagem;
-let inimigo
-let inimigoAtual =0;
+let inimigo;
+
+let jogo;
+let telaInicial;
+
+let cenaAtual = 'telaInicial';
+let cenas;
+
+let botaoGerenciador;
+
+
 
 const matrizPersonagem = [
       [0, 0],

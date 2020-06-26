@@ -8,7 +8,7 @@ class Personagem extends Animacao{
       this.y = this.yInicial;
       this.velocidadeDoPulo = 0;
       this.gravidade = 3;
-      this.alturaDoPulo = -40;
+      this.alturaDoPulo = -45;
       this.pulos = 0;
   
     }
@@ -43,10 +43,10 @@ class Personagem extends Animacao{
         this.largura * precisao,
         this.altura * precisao);
       rect(
-        inimigo.x,
-        inimigo.y,
+        inimigo.x ,
+        inimigo.y ,
         inimigo.largura * precisao,
-        inimigo.altura * precisao);
+        inimigo.altura );
 
 
       
@@ -58,7 +58,7 @@ class Personagem extends Animacao{
       inimigo.x,
       inimigo.y,
       inimigo.largura * precisao,
-      inimigo.altura * precisao
+      inimigo.altura 
     );
       
       return colisao;
