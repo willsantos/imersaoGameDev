@@ -7,9 +7,9 @@ class Jogo {
         pontuacao = new Pontuacao();
         cenario = new Cenario(imagemCenario, 3);
         personagem = new Personagem(matrizPersonagem, imagemPersonagem, 0, 30, 110, 135, 220, 270);
-        const inimigo = new Inimigo(matrizInimigoGota, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 3, 5);
-        const inimigoGrande = new Inimigo(matrizInimigoGrande, ImagemTroll, width * 4, 0, 200, 200, 400, 400, 3, 15);
-        const inimigoVoador = new Inimigo(matrizInimigoVoador, ImagemVoador, width - 52, 200, 100, 75, 200, 150, 5, 25)
+        const inimigo = new Inimigo(matrizInimigoGota, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 3, 10);
+        const inimigoGrande = new Inimigo(matrizInimigoGrande, ImagemTroll, width * 4, 0, 200, 200, 400, 400, 3, 10);
+        const inimigoVoador = new Inimigo(matrizInimigoVoador, ImagemVoador, width - 52, 200, 100, 75, 200, 150, 5, 10)
 
         inimigos.push(inimigo);
         inimigos.push(inimigoGrande);
@@ -47,7 +47,7 @@ class Jogo {
             if (this.inimigoAtual > 2) {
                 this.inimigoAtual = 0;
             }
-            inimigo.velocidade = parseInt(random(5, 30));
+            inimigo.velocidade = parseInt(random(10, 25));
         }
 
         if (personagem.estaColidindo(inimigo)) {
