@@ -37,7 +37,7 @@ class Jogo {
         vida.draw();
         pontuacao.exibe();
         pontuacao.addPonto();
-
+        
         personagem.exibe();
         personagem.aplicaGravidade();
 
