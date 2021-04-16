@@ -21,3 +21,11 @@ function keyPressed() {
 function draw() {
   cenas[cenaAtual].draw();
 }
+
+function touchStarted(event) {
+  jogo.touchStarted();
+}
+
+function touchEnded(event) {
+  jogo.touchEnded();
+}

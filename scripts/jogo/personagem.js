@@ -39,6 +39,13 @@ class Personagem extends Animacao {
     }
   }
 
+  pulaTouch() {
+    if (this.pulos < 1) {
+      this.velocidadeDoPulo = this.alturaDoPulo;
+      this.pulos++;
+    }
+  }
+
   aplicaGravidade() {
     this.y = this.y + this.velocidadeDoPulo;
     this.velocidadeDoPulo = this.velocidadeDoPulo + this.gravidade;
