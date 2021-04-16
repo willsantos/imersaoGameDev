@@ -50,6 +50,7 @@ class Personagem extends Animacao {
   }
 
   ficaInvencivel() {
+    somHit.play();
     this.invencivel = true;
     this.imagem = imagemPersonagemDano;
     setTimeout(() => {

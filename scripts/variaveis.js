@@ -11,6 +11,7 @@ let cenario;
 let somDoJogo;
 let somDoPulo;
 let somDerrota;
+let somHit;
 let personagem;
 let inimigo;
 
